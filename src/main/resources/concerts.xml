@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concerts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.example.org/concerts" xsi:schemaLocation="http://www.example.org/concerts concerts.xsd">
+    <concert id="id1">
+        <danceType>Ballroom dance</danceType>
+        <scene>Assembly hall</scene>
+        <numberOfDancers>2</numberOfDancers>
+        <liveMusic>true</liveMusic>
+        <dancers>
+            <dancer>
+                <name>Yury Grigorovich</name>
+                <age>24</age>
+                <seniority>4</seniority>
+            </dancer>
+            <dancer>
+                <name>Maris Liepa</name>
+                <age>23</age>
+                <seniority>2</seniority>
+            </dancer>
+        </dancers>
+        <numberInLine>1</numberInLine>
+    </concert>
+    <concert id="id2">
+        <danceType>Folk dance</danceType>
+        <scene>TV studio</scene>
+        <numberOfDancers>35</numberOfDancers>
+        <liveMusic>false</liveMusic>
+        <dancers>
+            <collective>
+                <title>Rainbow</title>
+                <yearOfFormation>1956</yearOfFormation>
+                <leaderName>Romanovich Zvir</leaderName>
+            </collective>
+        </dancers>
+        <numberInLine>2</numberInLine>
+    </concert>
+</concerts>

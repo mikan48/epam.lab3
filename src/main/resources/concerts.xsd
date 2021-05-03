@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/concerts"
+	xmlns:tns="http://www.example.org/concerts" elementFormDefault="qualified">
+	<element name="concerts">
+		<complexType>
+			<sequence>
+				<element name="concert" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="danceType" type="string" />
+							<element name="scene" type="string" />
+							<element name="numberOfDancers">
+								<simpleType>
+									<restriction base="byte">
+                    					<minInclusive value="1" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="liveMusic" type="boolean" />
+							<element name="dancers">
+								<complexType>
+									<choice>
+										<element name="collective">
+											<complexType>
+												<sequence>
+													<element name="title" type="string" />
+													<element name="yearOfFormation" type="gYear" />
+													<element name="leaderName" type="string" />
+												</sequence>
+											</complexType>
+										</element>
+										<element name="dancer" maxOccurs="unbounded">
+                        					<complexType>
+                          						<sequence>
+                            						<element name="name" type="string" />
+                            						<element name="age">
+														<simpleType>
+                                							<restriction base="byte">
+                                  								<minInclusive value="3" />
+																<maxInclusive value="78" />
+                                							</restriction>
+														</simpleType>
+                            						</element>
+                            						<element name="seniority">
+                              							<simpleType>
+                                							<restriction base="byte">
+                                  								<minInclusive value="0" />
+                                  								<maxInclusive value="65" />
+                                							</restriction>
+                             		 					</simpleType>
+                            						</element>
+                          						</sequence>
+                        					</complexType>
+                      					</element>
+                    				</choice>
+								</complexType>
+							</element>
+              				<element name="numberInLine" type="positiveInteger" />
+						</sequence>
+						<attribute name="id" type="ID" use="required" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
